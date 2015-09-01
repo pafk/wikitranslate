@@ -1,17 +1,22 @@
 <?php
 include 'array.php';
 
+echo " <meta charset='UTF-8'>";
+echo '<link rel="stylesheet" type="text/css" href="style.css">';
+echo '<div class="title">WIKITRANSLATE</div><br>';
 echo "<span class = 'word'> Translate: <input type='text' id = 'text'><br><span>";
 echo "<span class = 'dropdown'> From <select id='from'> ";
 foreach ($array as &$value)
 {
-	echo "<option value='".$value[1]."'>".html_entity_decode($value[0])."</option>";
+	echo "<option 
+value='".$value[1]."'>".urldecode($value[0])."</option>";
 }
 echo "</select> </span>";
 echo "<span class = 'dropdown'> To <select id='to'> ";
 foreach ($array as &$value)
 {
-	echo "<option value='".$value[1]."'>".html_entity_decode($value[0])."</option>";
+	echo "<option 
+value='".$value[1]."'>".urldecode($value[0])."</option>";
 }
 echo "</select> </span>";
 echo "<br>";
